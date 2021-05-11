@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+ "http://struts.apache.org/dtds/struts-2.0.dtd"> 	
+ <struts>
+<package name="default" extends="struts-default">
+ 		<action name="AddTaskOfPjt" class="com.intern.project.GroupofList" method="listofInternBatch"><!-- data fetch from database and use ajax -->
+ 		<result name="success">/addProjectTask.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<action name="addprojecttask" class="com.intern.project.ProjecttaskMain" method="addtaskofproject"><!-- x -->
+ 		<result name="success">/successfile.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+		
+ 		<action name="Adminlogin" class="com.intern.project.AdminLoginMain" method="saveadmin"><!--Admin Login  --> 
+ 		<result name="success">/AdminHomePage.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<!-- <action name="gotprojectmangerProfile" class="com.intern.project.ProjectMangerMain" method="datafetchById">Admin can see each profile of the Project Manger
+ 		<result name="success">/ProjectMangerHome.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action> -->
+ 		
+ 		<action name="allprojectM" class="com.intern.project.ProjectMangerMain" method="allProjectManger"><!--Admin See All Project Manger Data  -->
+ 		<result name="success">/dataProjectManger.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<action name="aProjectmanger" class="com.intern.project.ProjectMangerMain" method="saveprojectmanger"><!-- Register Project Manger By Admin -->
+ 		<result name="success">/LoginProjectManger.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<action name="aprojectMangerLogin" class="com.intern.project.LoginMainProjectManger" method="loginproject"><!--Project Manger Login  -->
+ 		<result name="success" type="redirectAction">/myaction2</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<action name="myaction2" class="com.intern.project.ProjectMangerMain" method="datafetchById"><!-- ProjectManger data fetch using by Id When Login -->
+ 		<result name="success">/ProjectMangerHome.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<action name="logoutfrompage" class="com.intern.project.LoginMainProjectManger" method="logout"><!-- ProjectManger Log Out -->
+ 		<result name="success">/LoginProjectManger.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<action name="deleteprojectmangerProfile" class="com.intern.project.ProjectMangerMain" method="deletedataById"><!-- ProjectManger data delete using by Id -->
+ 		<result name="success">/dataProjectManger.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		
+ 		<!-- 
+ 		<action name="editprojectmanger" class="com.intern.project.ProjectMangerMain" method="datafetchById">Project Manger can update his profile
+ 		<result name="success">/Editprojectmanger.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action> -->
+ 		
+ 		
+ 		<action name="ProjectChangepwd" class="com.intern.project.ProjectMangerMain" method="changepwdById"><!--Project Manger can Change password-->
+ 		<result name="success">/ProjectChangePass.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<action name="addbatch11" class="com.intern.project.InternMain" method="allInternData"><!--All Intern Data list fetch batch list  -->
+ 		<result name="success">/addbatch.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		
+ 		
+ 		
+ 		<action name="addBatchbyIntern" class="com.intern.project.AddBatchMain" method="saveBatch"><!-- Project Manger Save Batch in database  -->
+ 		<result name="success">/addbatch.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		
+ 		<action name="seeAllBatch" class="com.intern.project.AddBatchMain" method="allbatch"><!--All Batch Data list  -->
+ 		<result name="success">/allbatch.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<action name="deletebatch" class="com.intern.project.AddBatchMain" method="deleteBatchByProject"><!--All Batch Data list  -->
+ 		<result name="success">/allbatch.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<action name="addGruop11" class="com.intern.project.GroupofList" method="listofInternBatch"><!--All Intern Data list fetch Group list  -->
+ 		<result name="success">/AddGroupByProjectManger.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		
+ 		
+ 		<action name="Allotherbatch" class="com.intern.project.GroupofList" method="listofInternBatch"><!--All Intern Data list fetch Group list  -->
+ 		<result name="success">/Allbatchesdata.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<action name="Savegroup" class="com.intern.project.SaveGroupMain" method="savegroupbyProjectManger"><!-- Save Group  -->
+ 		<result name="success">/successfile.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<action name="ViewAllGroup" class="com.intern.project.SaveGroupMain" method="viewGroup"><!-- View Group-->
+ 		<result name="success">/viewGroups.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		
+ 		<action name="assignProjectTaskByprojectManger" class="com.intern.project.GroupofList"  method="listofInternBatch"><!-- Select All group list and batch to assign project task -->
+ 		<result name="success">/assignProjectTask.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<action name="SaveAssignTaskbyProjectManger" class="com.intern.project.AssignProjectTaskMain"  method="saveAssignProjectTask"><!-- Save project task data in database -->
+ 		<result name="success">/success.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		
+ 		<action name="ViewAssignTask" class="com.intern.project.AssignProjectTaskMain"  method="viewTask"><!-- View assign project  By Project Manger -->
+ 		<result name="success">/viewAlltask.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<action name="aIntern" class="com.intern.project.InternMain" method="saveintern"><!-- Register Intern by Project Manger -->
+ 		<result name="success">/LoginAsIntern.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<action name="AllIntern" class="com.intern.project.InternMain" method="allInternData"><!--Project Manger See All Intern Data  -->
+ 		<result name="success">/AlldataIntern.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+		<action name="logoutfrompage" class="com.intern.project.LoginInternMainPage" method="logout"><!-- ProjectManger Log Out -->
+ 		<result name="success">/LoginAsIntern.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<action name="AsAInternLogin" class="com.intern.project.LoginInternMainPage" method="loginAsIntern"><!--Project Manger Login  -->
+ 		<result name="success" type="redirectAction">/myaction3</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<action name="myaction3" class="com.intern.project.InternMain" method="InterndatafetchById"><!-- When Intern Login Their Data Show by Id -->
+ 		<result name="success">/ProfileIntern.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<action name="deleteIntern" class="com.intern.project.InternMain" method="deletedataById"><!-- Intern data delete using by Id -->
+ 		<result name="success">/AlldataIntern.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<!-- <action name="ajaxAction" class="intern.project.UsingAjaxJsonGetGroupMain" method="mybatchsearchGroupName">
+ 		<result name="success"  type="json">/tryout.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action> -->
+ 		
+ 		
+<!-- ***************************************Exam Module********************************************************************************************************** -->	
+ 	 <action name="saveExamdata" class="com.intern.project.CreateExamMain" method="addexam">
+ 		<result name="success">/successfile.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<action name="ViewExam" class="com.intern.project.CreateExamMain" method="allviewExam">
+ 		<result name="success">/ViewExam.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<action name="removeexam" class="com.intern.project.CreateExamMain" method="removeexambyIdbyProject">
+ 		<result name="success"></result>
+ 		<result name="error"></result>
+ 		</action>
+ 		
+ 		<action name="AddnewQuestion" class="com.intern.project.CreateExamMain" method="addexamUsingById">
+ 		<result name="success">addNewQuestion.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<action name="checkPrevious" class="com.intern.project.AddNewQuestionMain" method="viewQuestionusingById">
+ 		<result name="success">/addNewQuestion.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 
+ 		<action name="saveQuestion" class="com.intern.project.AddNewQuestionMain" method="addnewQuestion">
+ 		<result name="success">/addNewQuestion.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		
+ 		</action>
+ 		
+ 		<action name="viewAddedQuestion" class="com.intern.project.AddNewQuestionMain" method="viewQuestion">
+ 		<result name="success">/ViewAddedQuestion.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		
+ 		</action>
+ 		
+ 		
+ 		<action name="AllViewExam" class="com.intern.project.ViewExamByInternMain" method="allviewExamIntern">
+ 		<result name="success">viewExamByIntern.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+
+ 		 <action name="viewInstructions" class="com.intern.project.InstructionsExamMain" method="instructionQuestion">
+ 		<result name="success">/examtermsconditions.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		 
+ 		<action name="attemptExam" class="com.intern.project.AttemptQuestionMain" method="allattemptQuestion">
+ 		<result name="success">/attempExam.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		
+ 		<action name="answers" class="com.intern.project.AttemptQuestionMain" method="allattemptQuestion">
+ 		<result name="success">answersheet.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<action name="checkexamresult" class="com.intern.project.ResultQuestionMain" method="attemptedAnswerQuestion">
+ 		<result name="success">resultdata.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		
+ <!-- ***************************************End Module********************************************************************************************************** -->
+ 
+ <!-- ***************************************Intern Leave  Module********************************************************************************************************** -->
+ 		<action name="applyToLeave" class="com.intern.project.LeaveofInternMain" method="leaveofIntern">
+ 		<result name="success">internApplyToLeave.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		<action name="viewLeave" class="com.intern.project.LeaveofInternMain" method="viewleaveofIntern">
+ 		<result name="success">viewLeaveofIntern.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		
+ 		 <action name="viewLeaveByProject" class="com.intern.project.ApprovedLeaveByProject" method="approvedleaveofIntern">
+ 		<result name="success">/viewLeaveProject.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+ 		 <action name="editviewLeaveByProject" class="com.intern.project.ApprovedLeaveByProject" method="updateleaveeditById">
+ 		<result name="success">${msg}</result>
+ 		<result name="error">${msg}</result>
+ 		</action>
+ 		
+ 		 <action name="removeviewLeaveByProject" class="com.intern.project.ApprovedLeaveByProject" method="removeleaveeditById">
+ 		<result name="success">${msg}</result>
+ 		<result name="error">${msg}</result>
+ 		</action>
+ 		
+ 		 <action name="uploadresume" class="com.intern.project.InternMain" method="uploadresume">
+ 		<result name="success">ProfileIntern.jsp</result>
+ 		<result name="error">error.jsp</result>
+ 		</action>
+ <!-- ***************************************Intern Leave Module********************************************************************************************************** -->		
+ 		
+ 		
+ <!-- ***************************************Intern PlaceMent Module******************************************************************************************************* -->
+  <action name="interviewdata" class="com.intern.project.PlacementDepartmentMain" method="saveinterview">
+ 		<result name="success">interviewdetails.jsp</result>
+ 		<result name="error">error.jsp</result>
+  </action>
+ 		
+  <action name="viewInterviewmydata" class="com.intern.project.PlacementDepartmentMain" method="viewinterview">
+ 		<result name="success">viewinterviewdetails.jsp</result>
+ 		<result name="error">error.jsp</result>
+  </action>
+  
+  <action name="updateinterviewByProject" class="com.intern.project.PlacementDepartmentMain" method="updatebyProjectofInterview">
+ 		<result name="success"></result>
+ 		<result name="error">error.jsp</result>
+  </action>
+  
+  
+  
+  <action name="projectmangerverifyInterview" class="com.intern.project.ProjectPlacementDepartment" method="projectviewinterview">
+ 		<result name="success">projectviewinterviewdetails.jsp</result>
+ 		<result name="error">error.jsp</result>
+  </action>
+  
+  <action name="removeinterview" class="com.intern.project.ProjectPlacementDepartment" method="deleteInterview">
+ 		<result name="success"></result>
+ 		<result name="error">error.jsp</result>
+  </action>
+ <!-- ***************************************End Module********************************************************************************************************** -->
+ 		</package>
+ 		<!-- <include file="JsonCode/struts-jsoncode.xml"></include> -->
+ 		
+</struts>

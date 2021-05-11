@@ -1,0 +1,15 @@
+.textboxis{
+	
+	border: 2px solid #456879;
+	border-radius:10px;
+	height: 22px;
+	width: 230px;
+}
+
+.textareais{
+	
+	border: 2px solid #456879;
+	border-radius:10px;
+	height: 80px;
+	width: 230px;
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+ "http://struts.apache.org/dtds/struts-2.0.dtd"> 	
+ <struts>
+ <!-- <package name="default" extends="struts-default"> -->
+ <!-- ******************************************************Json Code********************************************************************************** -->
+ 		 <package name="default" extends="json-default">
+ <interceptors>
+            <interceptor-stack name="defaultStack">
+                <interceptor-ref name="json">
+                    <param name="enableSMD">true</param>
+                </interceptor-ref>
+            </interceptor-stack>
+        </interceptors>
+        <default-interceptor-ref name="defaultStack" />
+        
+        
+ <action name="mygroupdata" class="com.intern.project.AjaxCall">
+<result name="success" type="json"></result>
+<result name="error" type="json">/error.jsp</result>
+</action>
+
+<action name="myinterndata" class="com.intern.project.DoubleAjaxCall">
+<result name="success" type="json"></result>
+<result name="error" type="json">/error.jsp</result>
+</action>
+
+<action name="mygroupdata1" class="com.intern.project.AjaxCall"><!-- Select and fetch all group select using batch id -->
+<result name="success" type="json"></result>
+<result name="error" type="json">/error.jsp</result>
+</action>
+
+<action name="TestaddGruop11" class="com.intern.project.GroupofList" method="listofInternBatch"><!--this is test file-->
+ 		<result name="success">/Test.jsp</result>
+ 		<result name="error">/error.jsp</result>
+ 		</action>
+ 		
+<!-- ****************************************************************************************************************************************************************** --> 
+</package>
+</struts>
